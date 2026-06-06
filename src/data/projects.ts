@@ -1,13 +1,13 @@
-import robotBuilt from "@/assets/robot-built.png";
+import robotBuilt from "@/assets/robot-built.jpg";
 import robotCad from "@/assets/robot-cad.jpg";
-import droneCad from "@/assets/drone-cad.png";
-import droneArch from "@/assets/drone-arch.png";
-import slatStreamlines from "@/assets/slat-streamlines.png";
-import slatCfd from "@/assets/slat-cfd.png";
-import pinfinTest from "@/assets/pinfin-test.png";
-import pinfinSim from "@/assets/pinfin-sim.png";
-import clockBuilt from "@/assets/clock-built.png";
-import clockCad from "@/assets/clock-cad.png";
+import droneCad from "@/assets/drone-cad.jpg";
+import droneArch from "@/assets/drone-arch.jpg";
+import slatStreamlines from "@/assets/slat-streamlines.jpg";
+import slatCfd from "@/assets/slat-cfd.jpg";
+import pinfinTest from "@/assets/pinfin-test.jpg";
+import pinfinSim from "@/assets/pinfin-sim.jpg";
+import clockBuilt from "@/assets/clock-built.jpg";
+import clockCad from "@/assets/clock-cad.jpg";
 
 export type Project = {
   slug: string;
