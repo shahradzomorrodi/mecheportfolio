@@ -2,6 +2,7 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { projects, type Project } from "@/data/projects";
+import { bold } from "@/lib/bold";
 
 export const Route = createFileRoute("/projects/$slug")({
   loader: ({ params }) => {
@@ -87,7 +88,7 @@ function ProjectPage() {
               {project.org} · <span className="font-mono text-sm">{project.date}</span>
             </p>
             <p className="mt-6 text-lg md:text-xl text-foreground/80 leading-relaxed max-w-3xl">
-              {project.summary}
+              {bold(project.summary)}
             </p>
           </header>
 
@@ -172,7 +173,7 @@ function Block({ title, items }: { title: string; items: string[] }) {
         {items.map((it) => (
           <li key={it} className="flex gap-3">
             <span className="mt-2.5 inline-block h-1 w-1 rounded-full bg-primary shrink-0" />
-            <span>{it}</span>
+            <span>{bold(it)}</span>
           </li>
         ))}
       </ul>

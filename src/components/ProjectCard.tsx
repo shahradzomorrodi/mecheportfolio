@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import type { Project } from "@/data/projects";
+import { bold } from "@/lib/bold";
 
 export function ProjectCard({ project }: { project: Project }) {
   return (
@@ -24,7 +25,7 @@ export function ProjectCard({ project }: { project: Project }) {
           <span className="text-xs text-muted-foreground">{project.date}</span>
         </div>
         <h3 className="text-xl font-semibold leading-tight">{project.title}</h3>
-        <p className="text-sm text-muted-foreground line-clamp-3">{project.summary}</p>
+        <p className="text-sm text-muted-foreground line-clamp-3">{bold(project.summary)}</p>
         <div className="mt-auto pt-4 flex flex-wrap gap-2">
           {project.stats.slice(0, 3).map((s) => (
             <span

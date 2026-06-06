@@ -200,10 +200,10 @@ function Contact() {
       <div className="card-elev p-8 md:p-12 lg:p-16 text-center">
         <p className="eyebrow">Let's build</p>
         <h2 className="mt-4 font-display text-3xl md:text-5xl font-semibold tracking-tight">
-          Open to summer 2027 internships.
+          Let's design something together.
         </h2>
         <p className="mt-5 text-muted-foreground max-w-xl mx-auto">
-          Mechanical design, aerospace, R&amp;D, thermal/fluid systems — happy to chat about any of it.
+          Mechanical design, aerospace, R&amp;D, thermal and fluid systems. Happy to chat about any of it.
         </p>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
           <a
