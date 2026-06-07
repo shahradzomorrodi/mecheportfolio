@@ -6,8 +6,5 @@ export default defineConfig({
   },
   nitro: {
     preset: "vercel",
-    prerender: {
-      routes: ["/", "/resume", "/sitemap.xml"],
-    },
   },
 });
