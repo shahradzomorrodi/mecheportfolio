@@ -173,7 +173,7 @@ export const projects: Project[] = [
     category: "Mechanism Design",
     title: "Escapement Pendulum Clock",
     org: "Mechanical Design Project",
-    date: "2025",
+    date: "Dec 2024 to Feb 2025",
     summary:
       "A working acrylic pendulum-and-escapement clock designed as a sculptural form. Modeled in **Fusion 360** and **AutoCAD**, then **Laser Cutting** the parts and comparing two rigid-body timing models against measured behavior.",
     cover: clockBuilt,
