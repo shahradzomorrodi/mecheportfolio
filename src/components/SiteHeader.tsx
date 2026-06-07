@@ -26,6 +26,10 @@ export function SiteHeader() {
           <Link to="/" hash="contact" className="hover:text-foreground transition-colors">
             Contact
           </Link>
+          <Link to="/resume" className="hover:text-foreground transition-colors">
+            Resume
+          </Link>
+
         </nav>
         <a
           href={profile.resume}
