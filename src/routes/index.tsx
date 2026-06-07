@@ -51,9 +51,9 @@ function Home() {
       <SiteHeader />
       <main className="flex-1">
         <Hero />
+        <Experience />
         <Work />
         <About />
-        <Experience />
         <Contact />
       </main>
       <SiteFooter />
@@ -134,18 +134,14 @@ function About() {
     <section id="about" className="container-page py-20 md:py-28 scroll-mt-20">
       <div className="grid lg:grid-cols-12 gap-10">
         <div className="lg:col-span-5">
-          <SectionHead eyebrow="About" title="Engineer-in-training, hands on the hardware." />
+          <SectionHead eyebrow="About" title="Built in CAD, proven on the bench." />
         </div>
         <div className="lg:col-span-7 space-y-5 text-base md:text-lg text-muted-foreground leading-relaxed">
           <p>
-            I'm a mechanical engineering student at UC San Diego (B.S. expected March 2027). I'm
-            most at home where CAD, fabrication, and instrumented testing meet: sketching a
-            mechanism, running the numbers, then watching the part behave like the math said it would.
+            I'm a mechanical engineering student at UC San Diego, graduating with a B.S. in March 2027. My work sits at the intersection of CAD, fabrication, and instrumented testing: I sketch a mechanism, run the numbers, and then verify the hardware behaves the way the analysis predicted.
           </p>
           <p>
-            Recent work spans a competition robot, an eVTOL wildfire-response quadcopter, leading-edge
-            slat aerodynamics on a NACA airfoil, and pin-fin heat-sink characterization. I'm looking
-            for fall and winter internships in mechanical design, R&amp;D, aerospace, or thermal/fluid systems.
+            Recent projects include a competition robot, an eVTOL wildfire-response quadcopter, leading-edge slat aerodynamics on a NACA airfoil, and pin-fin heat-sink characterization. I'm currently seeking fall and winter internships in mechanical design, R&amp;D, aerospace, or thermal and fluid systems.
           </p>
           <div className="pt-4 grid sm:grid-cols-3 gap-6">
             {Object.entries(skills).map(([group, items]) => (
