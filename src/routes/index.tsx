@@ -3,6 +3,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { ProjectCard } from "@/components/ProjectCard";
 import { profile, projects, skills, experience } from "@/data/projects";
+import robotBuilt from "@/assets/robot-built.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -21,6 +22,9 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },
+      { property: "og:image", content: robotBuilt },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: robotBuilt },
     ],
     links: [{ rel: "canonical", href: "/" }],
     scripts: [
@@ -111,6 +115,20 @@ function Hero() {
             </div>
           ))}
         </dl>
+
+        <div className="mt-10">
+          <p className="eyebrow mb-3">Tools &amp; software</p>
+          <ul className="flex flex-wrap gap-2">
+            {Object.values(skills).flat().map((tool) => (
+              <li
+                key={tool}
+                className="rounded-full border border-rule bg-surface px-3 py-1 text-xs font-medium text-foreground"
+              >
+                {tool}
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </section>
   );
