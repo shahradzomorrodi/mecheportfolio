@@ -158,7 +158,7 @@ export const projects: Project[] = [
     results: [
       "V-pattern array raised the Nusselt number ~90% over the bare plate.",
       "Surface temperature dropped from 44.7 °C to 32.8 °C at equal power.",
-      "Fit Nu = 0.220 Re^0.678; applicable to avionics cooling.",
+      "Fit Nu = 0.220 · Re⁰·⁶⁷⁸; applicable to avionics cooling.",
     ],
     stats: [
       { value: "+89%", label: "Nusselt vs. bare" },
