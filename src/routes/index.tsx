@@ -67,7 +67,7 @@ function Home() {
 
 function Hero() {
   return (
-    <section className="container-page pt-16 md:pt-24 pb-12 md:pb-20">
+    <section className="container-page pt-16 md:pt-24 pb-4 md:pb-6">
       <div className="max-w-4xl">
         <p className="eyebrow mb-5 flex items-center gap-2">
           <span className="inline-block h-1.5 w-1.5 rounded-full bg-primary" />
@@ -151,7 +151,7 @@ function About() {
 
 function Experience() {
   return (
-    <section id="experience" className="container-page py-20 md:py-28 scroll-mt-20">
+    <section id="experience" className="container-page pt-10 md:pt-14 pb-20 md:pb-28 scroll-mt-20">
       <SectionHead eyebrow="Experience" title="Where I've worked" />
       <ol className="mt-12 space-y-px bg-rule rounded-2xl overflow-hidden border border-rule">
         {experience.map((e) => (
