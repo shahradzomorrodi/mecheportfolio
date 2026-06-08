@@ -166,10 +166,30 @@ function About() {
 }
 
 function Experience() {
+  const featured = experience.find((e) => e.spotlight)?.spotlight;
   return (
     <section id="experience" className="container-page py-20 md:py-28 scroll-mt-20">
       <SectionHead eyebrow="Experience" title="Where I've worked" />
-      <ol className="mt-12 space-y-px bg-rule rounded-2xl overflow-hidden border border-rule">
+      {featured && (
+        <figure className="mt-8 rounded-xl border border-primary/30 bg-primary/5 p-5 md:p-6">
+          <p className="eyebrow mb-2">Intern spotlight</p>
+          <blockquote className="text-base md:text-lg text-foreground leading-relaxed">
+            &ldquo;{featured.quote}&rdquo;
+          </blockquote>
+          <figcaption className="mt-3 text-xs md:text-sm text-muted-foreground">
+            &mdash; {featured.source} ·{" "}
+            <a
+              href={featured.url}
+              target="_blank"
+              rel="noreferrer"
+              className="font-medium text-primary hover:underline"
+            >
+              Read the full spotlight ↗
+            </a>
+          </figcaption>
+        </figure>
+      )}
+      <ol className="mt-8 space-y-px bg-rule rounded-2xl overflow-hidden border border-rule">
         {experience.map((e) => (
           <li key={e.role + e.date} className="bg-surface border-l-4 border-l-primary p-6 md:p-8 grid md:grid-cols-12 gap-4 transition-colors hover:bg-accent/40">
             <div className="md:col-span-4">
@@ -187,25 +207,6 @@ function Experience() {
                 </li>
               ))}
             </ul>
-            {e.spotlight && (
-              <figure className="md:col-span-8 md:col-start-5 mt-1 rounded-xl border border-primary/30 bg-primary/5 p-4 md:p-5">
-                <p className="eyebrow mb-2">Intern spotlight</p>
-                <blockquote className="text-sm md:text-base text-foreground leading-relaxed">
-                  &ldquo;{e.spotlight.quote}&rdquo;
-                </blockquote>
-                <figcaption className="mt-3 text-xs text-muted-foreground">
-                  &mdash; {e.spotlight.source} ·{" "}
-                  <a
-                    href={e.spotlight.url}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="font-medium text-primary hover:underline"
-                  >
-                    Read the full spotlight ↗
-                  </a>
-                </figcaption>
-              </figure>
-            )}
           </li>
         ))}
       </ol>
