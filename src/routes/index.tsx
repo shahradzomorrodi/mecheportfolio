@@ -71,7 +71,7 @@ function Hero() {
       <div className="max-w-4xl">
         <p className="eyebrow mb-5 flex items-center gap-2">
           <span className="inline-block h-1.5 w-1.5 rounded-full bg-primary" />
-          Mechanical Engineering · UC San Diego
+          Mechanical Engineering · UC San Diego · Expected March 2027
         </p>
         <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tight leading-[1.05]">
           I design, build, and{" "}
@@ -99,22 +99,6 @@ function Hero() {
             <span aria-hidden>↗</span>
           </a>
         </div>
-
-        <dl className="mt-14 grid grid-cols-2 sm:grid-cols-4 gap-px bg-rule rounded-2xl overflow-hidden border border-rule">
-          {[
-            { v: "5+", l: "Engineering projects" },
-            { v: "3", l: "Internships & teams" },
-            { v: "8+", l: "CAD & sim tools" },
-            { v: "2027", l: "Expected B.S." },
-          ].map((s) => (
-            <div key={s.l} className="bg-surface p-5">
-              <dt className="font-display text-2xl md:text-3xl font-semibold text-foreground">
-                {s.v}
-              </dt>
-              <dd className="mt-1 text-xs text-muted-foreground">{s.l}</dd>
-            </div>
-          ))}
-        </dl>
       </div>
     </section>
   );
@@ -166,30 +150,10 @@ function About() {
 }
 
 function Experience() {
-  const featured = experience.find((e) => e.spotlight)?.spotlight;
   return (
     <section id="experience" className="container-page py-20 md:py-28 scroll-mt-20">
       <SectionHead eyebrow="Experience" title="Where I've worked" />
-      {featured && (
-        <figure className="mt-8 rounded-xl border border-primary/30 bg-primary/5 p-5 md:p-6">
-          <p className="eyebrow mb-2">Intern spotlight</p>
-          <blockquote className="text-base md:text-lg text-foreground leading-relaxed">
-            &ldquo;{featured.quote}&rdquo;
-          </blockquote>
-          <figcaption className="mt-3 text-xs md:text-sm text-muted-foreground">
-            &mdash; {featured.source} ·{" "}
-            <a
-              href={featured.url}
-              target="_blank"
-              rel="noreferrer"
-              className="font-medium text-primary hover:underline"
-            >
-              Read the full spotlight ↗
-            </a>
-          </figcaption>
-        </figure>
-      )}
-      <ol className="mt-8 space-y-px bg-rule rounded-2xl overflow-hidden border border-rule">
+      <ol className="mt-12 space-y-px bg-rule rounded-2xl overflow-hidden border border-rule">
         {experience.map((e) => (
           <li key={e.role + e.date} className="bg-surface border-l-4 border-l-primary p-6 md:p-8 grid md:grid-cols-12 gap-4 transition-colors hover:bg-accent/40">
             <div className="md:col-span-4">
@@ -207,6 +171,17 @@ function Experience() {
                 </li>
               ))}
             </ul>
+            {e.spotlight && (
+              <a
+                href={e.spotlight.url}
+                target="_blank"
+                rel="noreferrer"
+                className="md:col-span-8 md:col-start-5 inline-flex w-fit items-center gap-1.5 rounded-full border border-primary/40 bg-primary/5 px-3 py-1 text-xs font-medium text-primary hover:bg-primary/10 transition-colors"
+              >
+                Featured in Gouvis Engineering's intern spotlight
+                <span aria-hidden>↗</span>
+              </a>
+            )}
           </li>
         ))}
       </ol>
