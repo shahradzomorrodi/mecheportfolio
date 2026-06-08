@@ -7,10 +7,8 @@ export function ProjectCard({ project }: { project: Project }) {
     <Link
       to="/projects/$slug"
       params={{ slug: project.slug }}
-      className="group card-elev overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1 hover:border-primary hover:shadow-[0_24px_60px_-30px_color-mix(in_oklab,var(--color-primary)_45%,transparent)]"
+      className="group card-elev overflow-hidden flex flex-col ring-2 ring-primary/50 transition-all duration-300 hover:-translate-y-1 hover:ring-primary hover:shadow-[0_24px_60px_-30px_color-mix(in_oklab,var(--color-primary)_45%,transparent)]"
     >
-      {/* Accent cap to make each project box pop */}
-      <div className="h-1.5 w-full bg-primary" />
       <div className="aspect-[4/3] overflow-hidden bg-surface-2">
         <img
           src={project.cover}
