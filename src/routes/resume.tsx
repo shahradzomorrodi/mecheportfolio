@@ -85,7 +85,7 @@ function ResumePage() {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    shahrad-zomorrodi-portfolio.vercel.app
+                    shahradzomorrodi.com
                   </a>
                 </p>
               </header>
