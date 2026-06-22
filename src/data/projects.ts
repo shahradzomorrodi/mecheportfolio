@@ -213,7 +213,7 @@ export const profile = {
   email: "shahradzomorrodi@gmail.com",
   phone: "(949) 527-8214",
   linkedin: "https://www.linkedin.com/in/shahradzomorrodi",
-  portfolio: "https://shahrad-zomorrodi-portfolio.vercel.app/",
+  portfolio: "https://shahradzomorrodi.com/",
   resume: "/shahrad-zomorrodi-resume.pdf",
   tagline:
     "I build systems where mechanical hardware meets rigorous analysis, from CFD-validated aerodynamics and thermal characterization to flight-ready eVTOL avionics and competition robotics.",
