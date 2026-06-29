@@ -211,7 +211,6 @@ export const profile = {
   school: "University of California, San Diego",
   grad: "B.S. Mechanical Engineering · Expected March 2027",
   email: "shahradzomorrodi@gmail.com",
-  phone: "(949) 527-8214",
   linkedin: "https://www.linkedin.com/in/shahradzomorrodi",
   portfolio: "https://shahradzomorrodi.com",
   resume: "/shahrad-zomorrodi-resume.pdf",

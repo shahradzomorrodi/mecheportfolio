@@ -35,7 +35,6 @@ export const Route = createFileRoute("/")({
           "@type": "Person",
           name: profile.name,
           email: `mailto:${profile.email}`,
-          telephone: profile.phone,
           jobTitle: "Mechanical Engineering Student",
           alumniOf: {
             "@type": "CollegeOrUniversity",
@@ -227,12 +226,6 @@ function Contact() {
             className="inline-flex items-center gap-2 rounded-full border border-rule bg-surface px-5 py-2.5 text-sm font-medium hover:border-foreground/40 transition-colors"
           >
             LinkedIn ↗
-          </a>
-          <a
-            href={`tel:${profile.phone.replace(/[^0-9+]/g, "")}`}
-            className="inline-flex items-center gap-2 rounded-full border border-rule bg-surface px-5 py-2.5 text-sm font-medium hover:border-foreground/40 transition-colors"
-          >
-            {profile.phone}
           </a>
         </div>
       </div>

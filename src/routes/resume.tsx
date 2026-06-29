@@ -69,12 +69,6 @@ function ResumePage() {
                   </a>
                   <a
                     className="hover:underline"
-                    href={`tel:${profile.phone.replace(/[^0-9+]/g, "")}`}
-                  >
-                    {profile.phone}
-                  </a>
-                  <a
-                    className="hover:underline"
                     href={profile.linkedin}
                     target="_blank"
                     rel="noreferrer"
