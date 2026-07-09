@@ -8,6 +8,8 @@ import pinfinTest from "@/assets/pinfin-test.jpg";
 import pinfinSim from "@/assets/pinfin-sim.jpg";
 import clockBuilt from "@/assets/clock-built.jpg";
 import clockCad from "@/assets/clock-cad.jpg";
+import controlsRootlocus from "@/assets/controls-rootlocus.jpg";
+import controlsResponse from "@/assets/controls-tuned-response.jpg";
 
 export type Project = {
   slug: string;
@@ -202,6 +204,46 @@ export const projects: Project[] = [
       { value: "5", label: "trials" },
     ],
     tools: ["Fusion 360", "AutoCAD", "Laser cutting", "Dynamics modeling"],
+  },
+  {
+    slug: "rotational-position-control",
+    index: "06",
+    category: "Controls",
+    title: "Rotational Position Control (PID Tuning)",
+    org: "UC San Diego · MAE 171A Feedback Control (team project)",
+    date: "Winter 2026",
+    summary:
+      "Modeled a 2-DOF torsional control system on real DSP-controlled hardware and tuned a **PID** controller by **root locus** design, closing a steady-state error the calculated gains left unresolved.",
+    cover: controlsResponse,
+    images: [
+      {
+        src: controlsRootlocus,
+        caption: "Proportional-only control: root locus and the resulting 63.2% overshoot, oscillatory step response.",
+      },
+      {
+        src: controlsResponse,
+        caption: "Final tuned PID controller: simulated vs. measured 1000-count step response.",
+      },
+    ],
+    what: [
+      "Modeled and controlled a 2-DOF rotational torsion system on a real DSP-controlled test rig.",
+      "Team project for UCSD's MAE 171A feedback control course.",
+    ],
+    how: [
+      "Extracted moment of inertia, torsional damping, and stiffness from 1-DOF step-response experiments, validating the model against simulation before closing the loop.",
+      "Designed a **PID** controller by **root locus**: proportional gain alone left 63.2% overshoot, so added derivative action for damping and integral action to remove steady-state error.",
+      "Calculated gains reached the setpoint but left residual steady-state error; iteratively increased Ki and Kd to converge on 1000 encoder counts within spec.",
+    ],
+    results: [
+      "Final tuned gains (Kp=0.2, Ki=0.2, Kd=0.019) produced 20.8% overshoot and a 1.40s settling time on a 1000-count step, meeting the <25% overshoot target.",
+      "Steady-state error converged to 0.1%, versus the calculated gains that failed to settle at the commanded position at all.",
+    ],
+    stats: [
+      { value: "20.8%", label: "overshoot (target <25%)" },
+      { value: "1.40 s", label: "settling time" },
+      { value: "0.1%", label: "steady-state error" },
+    ],
+    tools: ["PID control", "Root locus design", "MATLAB", "DSP real-time control", "System identification"],
   },
 ];
 
