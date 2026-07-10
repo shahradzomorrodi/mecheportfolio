@@ -277,6 +277,7 @@ export const skills = {
   "Fabrication & Methods": [
     "GD&T",
     "CFD",
+    "Linear Controls",
     "3D Printing",
     "Laser Cutting",
     "Machining",
