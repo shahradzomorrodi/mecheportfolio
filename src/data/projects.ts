@@ -210,7 +210,7 @@ export const projects: Project[] = [
     index: "06",
     category: "Controls",
     title: "Rotational Position Control (PID Tuning)",
-    org: "UC San Diego · MAE 171A Feedback Control (team project)",
+    org: "UC San Diego · MAE 171A Feedback Control",
     date: "Winter 2026",
     summary:
       "Modeled a 2-DOF torsional control system on real DSP-controlled hardware and tuned a **PID** controller by **root locus** design, closing a steady-state error the calculated gains left unresolved.",
@@ -227,7 +227,7 @@ export const projects: Project[] = [
     ],
     what: [
       "Modeled and controlled a 2-DOF rotational torsion system on a real DSP-controlled test rig.",
-      "Team project for UCSD's MAE 171A feedback control course.",
+      "Built for UCSD's MAE 171A feedback control course.",
     ],
     how: [
       "Extracted moment of inertia, torsional damping, and stiffness from 1-DOF step-response experiments, validating the model against simulation before closing the loop.",
