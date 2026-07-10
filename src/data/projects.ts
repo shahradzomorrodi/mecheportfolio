@@ -8,7 +8,7 @@ import pinfinTest from "@/assets/pinfin-test.jpg";
 import pinfinSim from "@/assets/pinfin-sim.jpg";
 import clockBuilt from "@/assets/clock-built.jpg";
 import clockCad from "@/assets/clock-cad.jpg";
-import controlsRootlocus from "@/assets/controls-rootlocus.jpg";
+import controlsApparatus from "@/assets/controls-apparatus.jpg";
 import controlsResponse from "@/assets/controls-tuned-response.jpg";
 
 export type Project = {
@@ -214,11 +214,11 @@ export const projects: Project[] = [
     date: "Winter 2026",
     summary:
       "Modeled a 2-DOF torsional control system on real DSP-controlled hardware and tuned a **PID** controller by **root locus** design, closing a steady-state error the calculated gains left unresolved.",
-    cover: controlsResponse,
+    cover: controlsApparatus,
     images: [
       {
-        src: controlsRootlocus,
-        caption: "Proportional-only control: root locus and the resulting 63.2% overshoot, oscillatory step response.",
+        src: controlsApparatus,
+        caption: "The ECP 2-DOF rotational torsion control apparatus: two disks, torsional spring, DSP real-time controller.",
       },
       {
         src: controlsResponse,
