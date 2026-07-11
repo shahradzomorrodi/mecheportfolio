@@ -249,6 +249,7 @@ export const projects: Project[] = [
 
 export const profile = {
   name: "Shahrad Zomorrodi",
+  citizenship: "U.S. Citizen",
   role: "Mechanical Engineering",
   school: "University of California, San Diego",
   grad: "B.S. Mechanical Engineering · Expected March 2027",

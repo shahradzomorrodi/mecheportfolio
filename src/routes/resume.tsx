@@ -64,6 +64,7 @@ function ResumePage() {
                   {profile.role} · {profile.school}
                 </p>
                 <p className="mt-3 text-sm text-foreground/90 flex flex-wrap gap-x-4 gap-y-1">
+                  <span>{profile.citizenship}</span>
                   <a className="hover:underline" href={`mailto:${profile.email}`}>
                     {profile.email}
                   </a>
