@@ -130,15 +130,15 @@ function About() {
         <div className="lg:col-span-7 space-y-5 text-base md:text-lg text-muted-foreground leading-relaxed">
           <p>
             I'm a mechanical engineering student at UC San Diego, graduating with a B.S. in March
-            2027. My work sits at the intersection of CAD, fabrication, and instrumented testing: I
-            sketch a mechanism, run the numbers, and then verify the hardware behaves the way the
-            analysis predicted.
+            2027. I build across software and physical systems, from deterministic AI engineering
+            tools and controls to CAD, fabrication, and instrumented testing.
           </p>
           <p>
-            Recent projects include a competition robot, an eVTOL wildfire-response quadcopter,
-            leading-edge slat aerodynamics on a NACA airfoil, and pin-fin heat-sink
-            characterization. I'm currently seeking fall and winter internships in mechanical
-            design, R&amp;D, aerospace, or thermal and fluid systems.
+            Recent work includes an open-source MCP server with five tested engineering tools, a
+            competition robot, an eVTOL wildfire-response quadcopter, and controls, aerodynamic, and
+            thermal validation projects. I'm seeking Winter 2027 internships and 2027 new-grad roles
+            in applied AI, engineering software, solutions engineering, robotics, controls, thermal
+            engineering, mechanical design, and R&amp;D.
           </p>
           <div className="pt-4 grid sm:grid-cols-3 gap-6">
             {Object.entries(skills).map(([group, items]) => (
@@ -210,8 +210,8 @@ function Contact() {
           Let's build something useful together.
         </h2>
         <p className="mt-5 text-muted-foreground max-w-xl mx-auto">
-          Applied AI engineering, engineering software, mechanical systems, controls, robotics, and
-          R&amp;D. Happy to talk about any of it.
+          Applied AI engineering, engineering software, solutions engineering, mechanical and
+          thermal systems, controls, robotics, and R&amp;D. Happy to talk about any of it.
         </p>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
           <a
