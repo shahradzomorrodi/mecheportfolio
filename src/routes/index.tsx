@@ -73,7 +73,8 @@ function Hero() {
           Mechanical Engineering · UC San Diego · Expected March 2027
         </p>
         <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tight leading-[1.05]">
-          I design, build, and <span className="text-primary">measure</span> mechanical systems.
+          I build <span className="text-primary">tools</span> and hardware for real engineering
+          systems.
         </h1>
         <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
           {profile.tagline}
@@ -108,7 +109,7 @@ function Work() {
       <SectionHead
         eyebrow="Selected work"
         title="Projects"
-        subtitle="Five case studies across robotics, UAV systems, aerodynamics, thermal, and mechanism design."
+        subtitle="Seven case studies across AI tooling, controls, robotics, UAV systems, aerodynamics, thermal, and mechanism design."
       />
       <div className="mt-12 grid gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {projects.map((p) => (
@@ -206,11 +207,11 @@ function Contact() {
       <div className="card-elev p-8 md:p-12 lg:p-16 text-center">
         <p className="eyebrow">Let's build</p>
         <h2 className="mt-4 font-display text-3xl md:text-5xl font-semibold tracking-tight">
-          Let's design something together.
+          Let's build something useful together.
         </h2>
         <p className="mt-5 text-muted-foreground max-w-xl mx-auto">
-          Mechanical design, aerospace, R&amp;D, thermal and fluid systems. Happy to chat about any
-          of it.
+          Applied AI engineering, engineering software, mechanical systems, controls, robotics, and
+          R&amp;D. Happy to talk about any of it.
         </p>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
           <a

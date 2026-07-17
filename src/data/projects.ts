@@ -10,6 +10,8 @@ import clockBuilt from "@/assets/clock-built.jpg";
 import clockCad from "@/assets/clock-cad.jpg";
 import controlsApparatus from "@/assets/controls-apparatus.jpg";
 import controlsResponse from "@/assets/controls-tuned-response.jpg";
+import mcpBeamCover from "@/assets/mcp-beam-analysis-cover.png";
+import mcpToolsDemo from "@/assets/mcp-tools-demo.gif";
 
 export type Project = {
   slug: string;
@@ -26,12 +28,57 @@ export type Project = {
   results: string[];
   stats: { value: string; label: string }[];
   tools: string[];
+  repoUrl?: string;
 };
 
 export const projects: Project[] = [
   {
-    slug: "robot-design-build",
+    slug: "mcp-engineering-tools",
     index: "01",
+    category: "AI Engineering Tools",
+    title: "Deterministic Engineering Tools for AI Assistants",
+    org: "Open Source Software Project",
+    date: "2026",
+    summary:
+      "A TypeScript **Model Context Protocol** server that gives AI assistants five deterministic mechanical-engineering tools, replacing plausible guesses with validated, checkable calculations.",
+    cover: mcpBeamCover,
+    images: [
+      {
+        src: mcpBeamCover,
+        caption:
+          "Deterministic beam-analysis result: a 500 N tip load produces 509 MPa stress and a factor of safety of 0.73, correctly flagging the rod as unsafe.",
+      },
+      {
+        src: mcpToolsDemo,
+        caption:
+          "Live walkthrough showing the server execute material, beam, conversion, and curve-fitting tools.",
+      },
+    ],
+    what: [
+      "An MCP server that exposes beam analysis, material properties, dimension-aware unit conversion, unit discovery, and experimental curve fitting to AI assistants.",
+      "Designed for engineering workflows where a model's numeric answer must be deterministic and independently checkable.",
+    ],
+    how: [
+      "Built in **TypeScript** with the MCP SDK and **Zod** schema validation over a standard-input/output transport.",
+      "Implemented ordinary-least-squares linear and power-law regression from scratch, including R-squared output and explicit invalid-input handling.",
+      "Added 26 unit tests, GitHub Actions CI, an end-to-end demo, and setup instructions for Claude Desktop, Claude Code, and MCP Inspector.",
+    ],
+    results: [
+      "Five callable tools return structured calculations instead of relying on model memory or arithmetic.",
+      "The test suite validates known beam cases, material aliases, dimensional consistency, temperature conversion, and curve-fitting behavior.",
+      "The open-source project includes a live demo GIF, CI status, installation steps, examples, and design notes.",
+    ],
+    stats: [
+      { value: "5", label: "MCP tools" },
+      { value: "26", label: "passing tests" },
+      { value: "CI", label: "GitHub Actions" },
+    ],
+    tools: ["TypeScript", "Model Context Protocol", "Zod", "Bun", "GitHub Actions", "Unit testing"],
+    repoUrl: "https://github.com/shahradzomorrodi/mcp-engineering-tools",
+  },
+  {
+    slug: "robot-design-build",
+    index: "02",
     category: "Design, Build, Test",
     title: "Competition Robot",
     org: "UC San Diego · Mechanical Design",
@@ -68,7 +115,7 @@ export const projects: Project[] = [
   },
   {
     slug: "evtol-wildfire-drone",
-    index: "02",
+    index: "03",
     category: "UAV Systems",
     title: "eVTOL Wildfire-Response Quadcopter",
     org: "Team Whiplash · VFS Competition",
@@ -103,7 +150,7 @@ export const projects: Project[] = [
   },
   {
     slug: "leading-edge-slat",
-    index: "03",
+    index: "04",
     category: "Aerodynamics",
     title: "Leading-Edge Slat Aerodynamics",
     org: "Experimental & Computational Study",
@@ -138,7 +185,7 @@ export const projects: Project[] = [
   },
   {
     slug: "pin-fin-heat-sink",
-    index: "04",
+    index: "05",
     category: "Thermal Analysis",
     title: "Pin-Fin Heat Sink Characterization",
     org: "Experimental & Computational Study",
@@ -172,7 +219,7 @@ export const projects: Project[] = [
   },
   {
     slug: "escapement-pendulum-clock",
-    index: "05",
+    index: "06",
     category: "Mechanism Design",
     title: "Escapement Pendulum Clock",
     org: "Mechanical Design Project",
@@ -207,7 +254,7 @@ export const projects: Project[] = [
   },
   {
     slug: "rotational-position-control",
-    index: "06",
+    index: "07",
     category: "Controls",
     title: "Rotational Position Control (PID Tuning)",
     org: "UC San Diego · MAE 171A Feedback Control",
@@ -218,7 +265,8 @@ export const projects: Project[] = [
     images: [
       {
         src: controlsApparatus,
-        caption: "The ECP 2-DOF rotational torsion control apparatus: two disks, torsional spring, DSP real-time controller.",
+        caption:
+          "The ECP 2-DOF rotational torsion control apparatus: two disks, torsional spring, DSP real-time controller.",
       },
       {
         src: controlsResponse,
@@ -243,14 +291,20 @@ export const projects: Project[] = [
       { value: "1.40 s", label: "settling time" },
       { value: "0.1%", label: "steady-state error" },
     ],
-    tools: ["PID control", "Root locus design", "MATLAB", "DSP real-time control", "System identification"],
+    tools: [
+      "PID control",
+      "Root locus design",
+      "MATLAB",
+      "DSP real-time control",
+      "System identification",
+    ],
   },
 ];
 
 export const profile = {
   name: "Shahrad Zomorrodi",
   citizenship: "U.S. Citizen",
-  role: "Mechanical Engineering",
+  role: "Mechanical Engineering and AI Tooling",
   school: "University of California, San Diego",
   grad: "B.S. Mechanical Engineering · Expected March 2027",
   email: "shahradzomorrodi@gmail.com",
@@ -259,10 +313,20 @@ export const profile = {
   portfolio: "https://shahradzomorrodi.com",
   resume: "/shahrad-zomorrodi-resume.pdf",
   tagline:
-    "I build systems where mechanical hardware meets rigorous analysis, from CFD-validated aerodynamics and thermal characterization to flight-ready eVTOL avionics and competition robotics.",
+    "I build tested software tools for physical systems, combining mechanical engineering, AI tooling, controls, robotics, and hardware-software integration.",
 };
 
 export const skills = {
+  "Software & AI Tooling": [
+    "TypeScript",
+    "Model Context Protocol",
+    "Node.js",
+    "Bun",
+    "Zod",
+    "Git",
+    "GitHub Actions",
+    "Unit Testing",
+  ],
   "Engineering Software": [
     "SolidWorks",
     "Fusion 360",

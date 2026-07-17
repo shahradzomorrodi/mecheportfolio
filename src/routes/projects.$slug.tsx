@@ -3,6 +3,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { projects, type Project } from "@/data/projects";
 import { bold } from "@/lib/bold";
+import { Github } from "lucide-react";
 
 export const Route = createFileRoute("/projects/$slug")({
   loader: ({ params }) => {
@@ -90,6 +91,17 @@ function ProjectPage() {
             <p className="mt-6 text-lg md:text-xl text-foreground/80 leading-relaxed max-w-3xl">
               {bold(project.summary)}
             </p>
+            {project.repoUrl && (
+              <a
+                href={project.repoUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline underline-offset-4"
+              >
+                <Github className="h-4 w-4" aria-hidden />
+                View source on GitHub
+              </a>
+            )}
           </header>
 
           {/* Stat strip */}
@@ -109,7 +121,11 @@ function ProjectPage() {
             {project.images.map((img) => (
               <figure key={img.src} className="card-elev overflow-hidden">
                 <div className="aspect-[4/3] bg-surface-2 overflow-hidden">
-                  <img src={img.src} alt={img.caption} className="h-full w-full object-cover" />
+                  <img
+                    src={img.src}
+                    alt={img.caption}
+                    className={`h-full w-full ${project.slug === "mcp-engineering-tools" ? "object-contain bg-zinc-950" : "object-cover"}`}
+                  />
                 </div>
                 <figcaption className="p-4 text-sm text-muted-foreground border-t border-rule">
                   {img.caption}
