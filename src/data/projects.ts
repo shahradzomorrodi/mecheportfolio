@@ -77,8 +77,62 @@ export const projects: Project[] = [
     repoUrl: "https://github.com/shahradzomorrodi/mcp-engineering-tools",
   },
   {
-    slug: "robot-design-build",
+    slug: "cantilever-fea-validation",
     index: "02",
+    category: "Structural Analysis",
+    title: "Cantilever FEA Validation",
+    org: "Independent Engineering Study",
+    date: "July 2026",
+    summary:
+      "Validated a 6061 aluminum cantilever in **Fusion 360 Static Stress** against closed-form beam theory under a 100 lbf tip load, matching maximum stress within **3.17%** and tip displacement within **1.02%**.",
+    cover: "/projects/fea-cantilever-validation/results/von-mises-stress.png",
+    images: [
+      {
+        src: "/projects/fea-cantilever-validation/results/von-mises-stress.png",
+        caption:
+          "Fusion von Mises stress result: 80.134 MPa maximum stress at the fixed end.",
+      },
+      {
+        src: "/projects/fea-cantilever-validation/results/total-displacement.png",
+        caption:
+          "Fusion total displacement result: 0.796 mm maximum displacement at the loaded free end.",
+      },
+      {
+        src: "/projects/fea-cantilever-validation/results/safety-factor.png",
+        caption:
+          "Fusion safety-factor result: 3.432 minimum factor of safety for the defined load case.",
+      },
+    ],
+    what: [
+      "Validated the expected stress and deflection response of a rectangular 6061 aluminum cantilever bracket.",
+      "Defined a fixed mount and 100 lbf downward free-end load, then checked simulation outputs against Euler-Bernoulli beam theory.",
+    ],
+    how: [
+      "Modeled a 6.695 in span, 1.157 in height, and 0.250 in thickness in **Fusion 360** and assigned Aluminum 6061 from Fusion's material library.",
+      "Ran a **Static Stress** study with a fixed support, 100 lbf free-end force, and Fusion's default mesh at zero cloud-credit cost.",
+      "Calculated area moment of inertia, maximum bending stress, and tip deflection from measured geometry before comparing them with FEA outputs.",
+    ],
+    results: [
+      "Fusion predicted 80.134 MPa maximum von Mises stress versus 82.759 MPa analytically, a 3.17% difference.",
+      "Fusion predicted 0.796 mm maximum displacement versus 0.788 mm analytically, a 1.02% difference.",
+      "Minimum factor of safety was 3.432, with peak stress at the fixed end and maximum displacement at the free end as expected.",
+    ],
+    stats: [
+      { value: "80.1 MPa", label: "max von Mises" },
+      { value: "0.796 mm", label: "max displacement" },
+      { value: "3.17%", label: "stress difference" },
+    ],
+    tools: [
+      "Fusion 360 Static Stress",
+      "FEA",
+      "Euler-Bernoulli beam theory",
+      "Stress analysis",
+      "Design validation",
+    ],
+  },
+  {
+    slug: "robot-design-build",
+    index: "03",
     category: "Design, Build, Test",
     title: "Competition Robot",
     org: "UC San Diego · Mechanical Design",
@@ -115,7 +169,7 @@ export const projects: Project[] = [
   },
   {
     slug: "evtol-wildfire-drone",
-    index: "03",
+    index: "04",
     category: "UAV Systems",
     title: "eVTOL Wildfire-Response Quadcopter",
     org: "Team Whiplash · VFS Competition",
@@ -150,7 +204,7 @@ export const projects: Project[] = [
   },
   {
     slug: "leading-edge-slat",
-    index: "04",
+    index: "05",
     category: "Aerodynamics",
     title: "Leading-Edge Slat Aerodynamics",
     org: "Experimental & Computational Study",
@@ -185,7 +239,7 @@ export const projects: Project[] = [
   },
   {
     slug: "pin-fin-heat-sink",
-    index: "05",
+    index: "06",
     category: "Thermal Analysis",
     title: "Pin-Fin Heat Sink Characterization",
     org: "Experimental & Computational Study",
@@ -219,7 +273,7 @@ export const projects: Project[] = [
   },
   {
     slug: "escapement-pendulum-clock",
-    index: "06",
+    index: "07",
     category: "Mechanism Design",
     title: "Escapement Pendulum Clock",
     org: "Mechanical Design Project",
@@ -254,7 +308,7 @@ export const projects: Project[] = [
   },
   {
     slug: "rotational-position-control",
-    index: "07",
+    index: "08",
     category: "Controls",
     title: "Rotational Position Control (PID Tuning)",
     org: "UC San Diego · MAE 171A Feedback Control",
@@ -341,6 +395,7 @@ export const skills = {
   ],
   "Fabrication & Methods": [
     "GD&T",
+    "FEA",
     "CFD",
     "Linear Controls",
     "3D Printing",
