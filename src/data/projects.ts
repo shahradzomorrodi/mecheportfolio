@@ -84,45 +84,41 @@ export const projects: Project[] = [
     org: "Independent Engineering Study",
     date: "July 2026",
     summary:
-      "Validated a 6061 aluminum cantilever in **Fusion 360 Static Stress** against closed-form beam theory under a 100 lbf tip load, matching maximum stress within **3.17%** and tip displacement within **1.02%**.",
-    cover: "/projects/fea-cantilever-validation/results/von-mises-stress.png",
+      "Validated a 6061-T6 aluminum cantilever in **ANSYS Mechanical** against Fusion 360 and Euler-Bernoulli beam theory under a 444.82 N end load, matching hand calculations within **3.8%** for stress and **4.4%** for deflection.",
+    cover: "/projects/fea-cantilever-validation/results/ansys-equivalent-stress.png",
     images: [
       {
-        src: "/projects/fea-cantilever-validation/results/von-mises-stress.png",
+        src: "/projects/fea-cantilever-validation/results/ansys-equivalent-stress.png",
         caption:
-          "Fusion von Mises stress result: 80.134 MPa maximum stress at the fixed end.",
+          "ANSYS Mechanical equivalent stress contour: 85.94 MPa peak von Mises stress at the fixed end.",
       },
       {
-        src: "/projects/fea-cantilever-validation/results/total-displacement.png",
+        src: "/projects/fea-cantilever-validation/results/ansys-total-deformation.png",
         caption:
-          "Fusion total displacement result: 0.796 mm maximum displacement at the loaded free end.",
-      },
-      {
-        src: "/projects/fea-cantilever-validation/results/safety-factor.png",
-        caption:
-          "Fusion safety-factor result: 3.432 minimum factor of safety for the defined load case.",
+          "ANSYS Mechanical total deformation contour: 0.822 mm maximum displacement at the loaded free end.",
       },
     ],
     what: [
-      "Validated the expected stress and deflection response of a rectangular 6061 aluminum cantilever bracket.",
-      "Defined a fixed mount and 100 lbf downward free-end load, then checked simulation outputs against Euler-Bernoulli beam theory.",
+      "Validated the expected stress and deflection response of a rectangular 6061-T6 aluminum cantilever benchmark.",
+      "Defined a fixed mount and 444.82 N downward free-end load, then checked ANSYS results against Fusion 360 and Euler-Bernoulli beam theory.",
     ],
     how: [
-      "Modeled a 6.695 in span, 1.157 in height, and 0.250 in thickness in **Fusion 360** and assigned Aluminum 6061 from Fusion's material library.",
-      "Ran a **Static Stress** study with a fixed support, 100 lbf free-end force, and Fusion's default mesh at zero cloud-credit cost.",
-      "Calculated area moment of inertia, maximum bending stress, and tip deflection from measured geometry before comparing them with FEA outputs.",
+      "Built a 170.053 mm by 29.388 mm by 6.35 mm benchmark in **ANSYS Mechanical** and Fusion 360 using 6061-T6 properties, a 186.61 mm squared fixed end face, and a distributed edge load.",
+      "Solved static structural studies and compared solver contours with hand calculations for area moment of inertia, maximum bending stress, and tip deflection.",
+      "Documented mesh, boundary conditions, load direction, and contour results so the validation can be repeated and reviewed.",
     ],
     results: [
-      "Fusion predicted 80.134 MPa maximum von Mises stress versus 82.759 MPa analytically, a 3.17% difference.",
-      "Fusion predicted 0.796 mm maximum displacement versus 0.788 mm analytically, a 1.02% difference.",
-      "Minimum factor of safety was 3.432, with peak stress at the fixed end and maximum displacement at the free end as expected.",
+      "ANSYS predicted 85.94 MPa peak von Mises stress versus 82.76 MPa analytically, a 3.8% difference.",
+      "ANSYS predicted 0.822 mm maximum displacement versus 0.788 mm analytically, a 4.4% difference.",
+      "The 276 MPa yield-strength reference gives a 3.21 safety factor, with peak stress at the fixed end and maximum displacement at the free end as expected.",
     ],
     stats: [
-      { value: "80.1 MPa", label: "max von Mises" },
-      { value: "0.796 mm", label: "max displacement" },
-      { value: "3.17%", label: "stress difference" },
+      { value: "85.9 MPa", label: "max von Mises" },
+      { value: "0.822 mm", label: "max displacement" },
+      { value: "3.8%", label: "stress difference" },
     ],
     tools: [
+      "ANSYS Mechanical",
       "Fusion 360 Static Stress",
       "FEA",
       "Euler-Bernoulli beam theory",
