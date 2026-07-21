@@ -125,6 +125,7 @@ export const projects: Project[] = [
       "Stress analysis",
       "Design validation",
     ],
+    repoUrl: "https://github.com/shahradzomorrodi/cantilever-fea-validation",
   },
   {
     slug: "robot-design-build",
